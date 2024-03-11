@@ -1,0 +1,18 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="Base.Theme.InstagramClone" parent="Theme.Material3.DayNight.NoActionBar">
+
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+    </style>
+
+    <style name="Theme.InstagramClone" parent="Base.Theme.InstagramClone">
+        <item name="font">@font/instatop</item>
+    </style>
+
+
+
+    <style name="Circular">
+        <item name="cornerSize">50%</item>
+    </style>
+</resources>

@@ -1,0 +1,17 @@
+<!-- item_profile_image.xml -->
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <!-- Define variables here if needed -->
+    </data>
+
+    <ImageView
+        android:id="@+id/profile_image"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/user9" />
+
+    <!-- Add more views here as needed -->
+
+</layout>
