@@ -10,7 +10,11 @@
         android:layout_width="150dp"
         android:layout_height="150dp"
         android:scaleType="centerCrop"
-        android:src="@drawable/user9" />
+        android:src="@drawable/user9"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="1dp"
+        />
+
 
     <!-- Add more views here as needed -->
 

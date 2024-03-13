@@ -5,6 +5,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.harsh.instagramclone.R
 import com.harsh.instagramclone.dataclasses.PostData
@@ -24,6 +25,10 @@ class PostAdapter(var postList: List<PostData>) : RecyclerView.Adapter<PostViewH
      holder.postPic.setImageResource(postList[position].post)
         holder.profilePic.setImageResource(postList[position].profilePicture)
         holder.userName.text = postList[position].userName
+        holder.itemView.setOnClickListener {
+            holder.itemView.findNavController().navigate(R.id.profileFragment,R.id.postDetailsFragment)
+        }
+
     }
 }
 

@@ -24,10 +24,19 @@
         android:id="@+id/profileFragment"
         android:name="com.harsh.instagramclone.fragments.ProfileFragment"
         android:label="fragment_profile"
-        tools:layout="@layout/fragment_profile" />
+        tools:layout="@layout/fragment_profile" >
+        <action
+            android:id="@+id/action_profileFragment_to_postDetailsFragment"
+            app:destination="@id/postDetailsFragment" />
+    </fragment>
     <fragment
         android:id="@+id/reelsFragment"
         android:name="com.harsh.instagramclone.fragments.ReelsFragment"
         android:label="fragment_reels"
         tools:layout="@layout/fragment_reels" />
+    <fragment
+        android:id="@+id/postDetailsFragment"
+        android:name="com.harsh.instagramclone.fragments.PostDetailsFragment"
+        android:label="fragment_post_details"
+        tools:layout="@layout/fragment_post_details" />
 </navigation>
