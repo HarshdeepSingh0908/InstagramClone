@@ -56,18 +56,21 @@
         app:layout_constraintTop_toBottomOf="@id/iv_post"
         android:id="@+id/llbelow">
         <ImageView
+            android:id="@+id/like_img"
             android:layout_width="35dp"
             android:layout_height="35dp"
             android:padding="5dp"
             android:layout_marginStart="5dp"
             android:src="@drawable/like" />
         <ImageView
+            android:id="@+id/comment_img"
             android:layout_width="35dp"
             android:layout_height="35dp"
             android:padding="5dp"
             android:layout_marginStart="10dp"
             android:src="@drawable/comment" />
         <ImageView
+            android:id="@+id/share_img"
             android:layout_width="35dp"
             android:layout_height="35dp"
             android:padding="5dp"
@@ -84,6 +87,7 @@
             android:layout_height="35dp"
             android:padding="5dp"
             android:src="@drawable/bookmark"
+            android:id="@+id/bookmark_img"
             />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

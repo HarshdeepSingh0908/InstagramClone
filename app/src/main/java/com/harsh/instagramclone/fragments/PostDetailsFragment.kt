@@ -5,7 +5,10 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
+import androidx.appcompat.app.AppCompatActivity
 import com.harsh.instagramclone.R
+import com.harsh.instagramclone.databinding.FragmentPostDetailsBinding
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -17,7 +20,9 @@ private const val ARG_PARAM2 = "param2"
  * Use the [PostDetailsFragment.newInstance] factory method to
  * create an instance of this fragment.
  */
-class PostDetailsFragment : Fragment() {
+class PostDetailsFragment : Fragment(){
+    lateinit var binding : FragmentPostDetailsBinding
+    private var imageResId: Int = -1
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
@@ -35,9 +40,19 @@ class PostDetailsFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_post_details, container, false)
+        binding = FragmentPostDetailsBinding.inflate(layoutInflater)
+        (activity as? AppCompatActivity)?.supportActionBar?.hide()
+        return binding.root
     }
 
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        // Retrieve the image resource ID from arguments
+        imageResId = requireArguments().getInt("imageResId", -1)
+
+        // Set the image resource to the ImageView using data binding
+        binding.ivPost.setImageResource(imageResId)
+    }
     companion object {
         /**
          * Use this factory method to create a new instance of
@@ -57,4 +72,6 @@ class PostDetailsFragment : Fragment() {
                 }
             }
     }
+
+
 }

@@ -5,6 +5,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.appcompat.app.AppCompatActivity
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.harsh.instagramclone.R
 import com.harsh.instagramclone.adapters.PostAdapter
@@ -27,6 +29,7 @@ lateinit var binding : FragmentHomeBinding
         savedInstanceState: Bundle?
     ): View? {
         binding = FragmentHomeBinding.inflate(layoutInflater)
+        (activity as? AppCompatActivity)?.supportActionBar?.show()
         return binding.root
     }
 
@@ -44,7 +47,7 @@ lateinit var binding : FragmentHomeBinding
         storyList.add(StoryData("user8",R.drawable.user8))
         storyList.add(StoryData("user9",R.drawable.user9))
         storyList.add(StoryData("user10",R.drawable.user10))
-        binding.rvStory.adapter = StoryAdapter(storyList)
+        binding.rvStory.adapter = StoryAdapter(storyList,findNavController())
         val layoutManager = LinearLayoutManager(requireContext(),LinearLayoutManager.HORIZONTAL,false)
         binding.rvStory.layoutManager = layoutManager
 

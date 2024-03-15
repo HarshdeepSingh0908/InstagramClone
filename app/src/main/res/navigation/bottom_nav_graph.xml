@@ -9,7 +9,11 @@
         android:id="@+id/homeFragment"
         android:name="com.harsh.instagramclone.fragments.HomeFragment"
         android:label="@string/instagram"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_storyDetailsFragment"
+            app:destination="@id/storyDetailsFragment" />
+    </fragment>
     <fragment
         android:id="@+id/searchFragment"
         android:name="com.harsh.instagramclone.fragments.SearchFragment"
@@ -24,10 +28,16 @@
         android:id="@+id/profileFragment"
         android:name="com.harsh.instagramclone.fragments.ProfileFragment"
         android:label="fragment_profile"
-        tools:layout="@layout/fragment_profile" >
+        tools:layout="@layout/fragment_profile">
         <action
             android:id="@+id/action_profileFragment_to_postDetailsFragment"
-            app:destination="@id/postDetailsFragment" />
+            app:destination="@id/postDetailsFragment">
+
+        </action>
+        <action
+            android:id="@+id/action_profileFragment_to_highlightDetailsFragment"
+            app:destination="@id/highlightDetailsFragment" />
+
     </fragment>
     <fragment
         android:id="@+id/reelsFragment"
@@ -39,4 +49,14 @@
         android:name="com.harsh.instagramclone.fragments.PostDetailsFragment"
         android:label="fragment_post_details"
         tools:layout="@layout/fragment_post_details" />
+    <fragment
+        android:id="@+id/highlightDetailsFragment"
+        android:name="com.harsh.instagramclone.fragments.HighlightDetailsFragment"
+        android:label="fragment_highlight_details"
+        tools:layout="@layout/fragment_highlight_details" />
+    <fragment
+        android:id="@+id/storyDetailsFragment"
+        android:name="com.harsh.instagramclone.fragments.StoryDetailsFragment"
+        android:label="fragment_story_details"
+        tools:layout="@layout/fragment_story_details" />
 </navigation>
